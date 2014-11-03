@@ -13,7 +13,6 @@ soon (hopefully):
 # Screenshots
 
 ![Spell list](https://github.com/servy/dnd5spellbook/raw/master/screenshot/screen1.png "Spell list")
-
 ![Spell list](https://github.com/servy/dnd5spellbook/raw/master/screenshot/screen2.png "Spell details")
 
 # Building the project
