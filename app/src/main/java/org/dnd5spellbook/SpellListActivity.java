@@ -194,7 +194,7 @@ public class SpellListActivity extends FragmentActivity {
          */
         private void gotoSpellActivity(int position) {
             Intent intent = new Intent(getActivity(), SpellActivity.class);
-            intent.putExtra(SpellActivity.SPELL_NAME, fullData.get(position));
+            intent.putExtra(SpellActivity.SPELL_NAME, filteredData.get(position));
             startActivity(intent);
         }
     }
