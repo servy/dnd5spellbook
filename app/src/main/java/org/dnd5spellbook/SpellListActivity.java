@@ -2,20 +2,22 @@ package org.dnd5spellbook;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.ListFragment;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
@@ -24,21 +26,29 @@ import java.util.logging.Logger;
 /**
  * An activity that displays a list of spells
  */
-public class SpellListActivity extends ActionBarActivity {
+public class SpellListActivity extends FragmentActivity {
+
+    protected SpellListFragment spellListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spell_list);
+
         if (savedInstanceState == null) {
+            spellListFragment = new SpellListFragment();
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new SpellListFragment())
+                    .add(R.id.container, spellListFragment, SpellListFragment.TAG)
                     .commit();
         }
+        else
+            spellListFragment = (SpellListFragment) getSupportFragmentManager().findFragmentByTag(SpellListFragment.TAG);
+
+        EditText filterText = (EditText) findViewById(R.id.filterText);
+        filterText.addTextChangedListener(new FilterTextWatcher());
 
         setTitle("Dnd 5 spell list");
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,16 +70,39 @@ public class SpellListActivity extends ActionBarActivity {
     }
 
     /**
+     * Watches for filter text edit changes and invokes spell list filtering
+     */
+    protected class FilterTextWatcher implements TextWatcher  {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            // intentionally empty
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            // intentionally empty
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            spellListFragment.filter(s);
+        }
+    }
+
+    /**
      * A main fragment containing a list of spells
      */
     public static class SpellListFragment extends ListFragment implements SwipeListViewTouchListener.OnSwipeCallback {
 
+        public static final String TAG = "SpellListFragment";
         private static final Logger logger = Logger.getLogger(SpellListFragment.class.getName());
 
         private ArrayAdapter<String> adapter;
-        private List<String> data;
+        private List<String> fullData;
+        private List<String> filteredData;
 
         public SpellListFragment() {
+
         }
 
         @Override
@@ -82,13 +115,50 @@ public class SpellListActivity extends ActionBarActivity {
         public void onActivityCreated(@Nullable Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
 
-            data = readSpellListFromAssets();
+            fullData = readSpellListFromAssets();
+            filteredData = new ArrayList<String>(fullData);
 
             adapter = new ArrayAdapter<String>(getActivity(),
-                    android.R.layout.simple_list_item_1, data);
+                    android.R.layout.simple_list_item_1, filteredData);
             setListAdapter(adapter);
 
             new SwipeListViewTouchListener(getListView(), this);
+        }
+
+        @Override
+        public void onListItemClick(ListView l, View v, int position, long id) {
+            super.onListItemClick(l, v, position, id);
+            gotoSpellActivity(position);
+        }
+
+        @Override
+        public void onSwipeLeft(ListView listView, int position) {
+            // TODO: add to favorites
+        }
+
+        @Override
+        public void onSwipeRight(ListView listView, int position) {
+            gotoSpellActivity(position);
+        }
+
+        /**
+         * Filters the displayed list of spells retaining only those which contain
+         * {@code filterString}.
+         * @param filterString
+         */
+        public void filter(CharSequence filterString) {
+            filteredData.clear();
+            if (filterString == null || filterString.length() == 0) {
+                filteredData.addAll(fullData);
+            }
+            else {
+                String lowerFilterString = filterString.toString().toLowerCase();
+                for (String fullSpell : fullData) {
+                    if (fullSpell.toLowerCase().contains(lowerFilterString))
+                        filteredData.add(fullSpell);
+                }
+            }
+            adapter.notifyDataSetChanged();
         }
 
         /**
@@ -116,22 +186,6 @@ public class SpellListActivity extends ActionBarActivity {
             }
         }
 
-        @Override
-        public void onListItemClick(ListView l, View v, int position, long id) {
-            super.onListItemClick(l, v, position, id);
-            gotoSpellActivity(position);
-        }
-
-        @Override
-        public void onSwipeLeft(ListView listView, int position) {
-            // TODO: add to favorites
-        }
-
-        @Override
-        public void onSwipeRight(ListView listView, int position) {
-            gotoSpellActivity(position);
-        }
-
         /**
          * Starts an {@link org.dnd5spellbook.SpellActivity} with details of
          * the spell at specified {@code position}.
@@ -140,7 +194,7 @@ public class SpellListActivity extends ActionBarActivity {
          */
         private void gotoSpellActivity(int position) {
             Intent intent = new Intent(getActivity(), SpellActivity.class);
-            intent.putExtra(SpellActivity.SPELL_NAME, data.get(position));
+            intent.putExtra(SpellActivity.SPELL_NAME, fullData.get(position));
             startActivity(intent);
         }
     }
