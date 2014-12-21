@@ -31,19 +31,28 @@ public class SpellListActivity extends FragmentActivity {
     protected SpellListFragment spellListFragment;
 
     @Override
+    protected void onResume() {
+        spellListFragment = (SpellListFragment) getSupportFragmentManager().findFragmentByTag(SpellListFragment.TAG);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        spellListFragment = null;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spell_list);
 
         if (savedInstanceState == null) {
-            spellListFragment = new SpellListFragment();
+            SpellListFragment fragment = new SpellListFragment();
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, spellListFragment, SpellListFragment.TAG)
+                    .add(R.id.container, fragment, SpellListFragment.TAG)
                     .commit();
         }
-        else
-            spellListFragment = (SpellListFragment) getSupportFragmentManager().findFragmentByTag(SpellListFragment.TAG);
-
         EditText filterText = (EditText) findViewById(R.id.filterText);
         filterText.addTextChangedListener(new FilterTextWatcher());
 
