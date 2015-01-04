@@ -12,9 +12,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import org.dnd5spellbook.domain.Spell;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -106,9 +107,7 @@ public class SpellListActivity extends FragmentActivity {
         public static final String TAG = "SpellListFragment";
         private static final Logger logger = Logger.getLogger(SpellListFragment.class.getName());
 
-        private ArrayAdapter<String> adapter;
-        private List<String> fullData;
-        private List<String> filteredData;
+        private SpellAdapter adapter;
 
         public SpellListFragment() {
 
@@ -124,11 +123,7 @@ public class SpellListActivity extends FragmentActivity {
         public void onActivityCreated(@Nullable Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
 
-            fullData = readSpellListFromAssets();
-            filteredData = new ArrayList<String>(fullData);
-
-            adapter = new ArrayAdapter<String>(getActivity(),
-                    android.R.layout.simple_list_item_1, filteredData);
+            adapter = new SpellAdapter(getActivity(), readSpellListFromAssets());
             setListAdapter(adapter);
 
             new SwipeListViewTouchListener(getListView(), this);
@@ -142,7 +137,7 @@ public class SpellListActivity extends FragmentActivity {
 
         @Override
         public void onSwipeLeft(ListView listView, int position) {
-            // TODO: add to favorites
+            adapter.setFavorite(position, !adapter.getItem(position).isFavorite());
         }
 
         @Override
@@ -153,41 +148,31 @@ public class SpellListActivity extends FragmentActivity {
         /**
          * Filters the displayed list of spells retaining only those which contain
          * {@code filterString}.
-         * @param filterString
+         * @param filterString string constraining the displayed spell list
          */
         public void filter(CharSequence filterString) {
-            filteredData.clear();
-            if (filterString == null || filterString.length() == 0) {
-                filteredData.addAll(fullData);
-            }
-            else {
-                String lowerFilterString = filterString.toString().toLowerCase();
-                for (String fullSpell : fullData) {
-                    if (fullSpell.toLowerCase().contains(lowerFilterString))
-                        filteredData.add(fullSpell);
-                }
-            }
-            adapter.notifyDataSetChanged();
+            adapter.getFilter().filter(filterString);
         }
 
         /**
-         * Reads all spell file names from assets and returns them. The returned list
+         * Reads all spells from assets and returns them. The returned list
          * is sorted in alphabetical order for convenience.
          *
-         * @return List of spell names that was read from assets
+         * @return List of spells that was read from assets
          */
-        private List<String> readSpellListFromAssets() {
+        private List<Spell> readSpellListFromAssets() {
             try {
                 String[] names = getActivity().getApplication().getAssets().list(Constants.DND_SPELLS_ASSETS_PATH);
 
-                List<String> results = new ArrayList<String>();
-                for (int i=0; i<names.length; i++) {
-                    if (names[i].endsWith(".html")) {
-                        results.add(names[i].substring(0, names[i].length() - ".html".length()));
+                List<Spell> results = new ArrayList<>();
+                for (String name : names) {
+                    if (name.endsWith(".html")) {
+                        results.add(new Spell(name.substring(0, name.length() - ".html".length())));
                     }
                 }
+                // TODO: read favorite spells
 
-                Collections.sort(results);
+                Collections.sort(results, Spell.NAME_COMPARATOR);
                 return results;
             } catch (IOException e) {
                 logger.log(Level.SEVERE, "Error while retrieving spell list", e);
@@ -203,7 +188,7 @@ public class SpellListActivity extends FragmentActivity {
          */
         private void gotoSpellActivity(int position) {
             Intent intent = new Intent(getActivity(), SpellActivity.class);
-            intent.putExtra(SpellActivity.SPELL_NAME, filteredData.get(position));
+            intent.putExtra(SpellActivity.SPELL_NAME, adapter.getItem(position).getName());
             startActivity(intent);
         }
     }
