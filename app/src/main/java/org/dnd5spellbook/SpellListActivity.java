@@ -3,12 +3,13 @@ package org.dnd5spellbook;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.ListFragment;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Xml;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,9 +19,17 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import org.dnd5spellbook.domain.Spell;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 
+import org.dnd5spellbook.domain.ClassLevelConstraint;
+import org.dnd5spellbook.domain.Spell;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -208,10 +217,11 @@ public class SpellListActivity extends FragmentActivity {
          * Makes spells which names are in favoriteSpellNames favorite and makes all
          * other spells unfavorite. {@link #filter} method must be called in order to
          * ensure that only rights items are shown after the change.
+         *
          * @param favoriteSpellNames set of spell names which should be favorite
          */
         public void setFavoriteSpellNames(Set<String> favoriteSpellNames) {
-            for (Spell spell: adapter)
+            for (Spell spell : adapter)
                 spell.setFavorite(favoriteSpellNames.contains(spell.getName()));
         }
 
@@ -224,14 +234,15 @@ public class SpellListActivity extends FragmentActivity {
         private List<Spell> readSpellListFromAssets() {
             try {
                 String[] names = getActivity().getApplication().getAssets().list(Constants.DND_SPELLS_ASSETS_PATH);
+                Multimap<String, ClassLevelConstraint> constraints = readSpellClassLevelConstraints();
 
                 List<Spell> results = new ArrayList<>();
                 for (String name : names) {
                     if (name.endsWith(".html")) {
-                        results.add(new Spell(name.substring(0, name.length() - ".html".length())));
+                        String spellName = name.substring(0, name.length() - ".html".length());
+                        results.add(new Spell(spellName, constraints.get(spellName)));
                     }
                 }
-                // TODO: read favorite spells
 
                 Collections.sort(results, Spell.NAME_COMPARATOR);
                 return results;
@@ -239,6 +250,87 @@ public class SpellListActivity extends FragmentActivity {
                 logger.log(Level.SEVERE, "Error while retrieving spell list", e);
                 throw new RuntimeException(e);
             }
+        }
+
+        /**
+         * Reads all spell constrains from an asset file and returns them as a Multimap.
+         * The key in the map is the spell name, and values represent a collection of
+         * class level constraints for the spell)
+         *
+         * @return a Multimap from spell name (key) to class level constraints of the spell (value)
+         */
+        private Multimap<String, ClassLevelConstraint> readSpellClassLevelConstraints() {
+            XmlPullParser parser = Xml.newPullParser();
+            InputStream stream;
+            try {
+                stream = getActivity().getApplicationContext().getAssets().open(Constants.DND_SPELLS_ASSETS_PATH + "/spell_metadata.xml");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            try  {
+                parser.setInput(stream, "UTF-8");
+                return readSpellClassLevelConstraints(parser);
+            } catch (IOException | XmlPullParserException e) {
+                throw new RuntimeException(e);
+            } finally {
+                try {
+                    stream.close();
+                } catch (IOException e) {
+                    //noinspection ThrowFromFinallyBlock
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        /**
+         * Reads all spell constrains from a given parser and returns them as a Multimap.
+         * The key in the map is the spell name, and values represent a collection of
+         * class level constraints for the spell)
+         *
+         * @param parser Parser to read constraints data from
+         *
+         * @return a Multimap from spell name (key) to class level constraints of the spell (value)
+         *
+         */
+        private Multimap<String, ClassLevelConstraint>readSpellClassLevelConstraints(XmlPullParser parser) throws IOException, XmlPullParserException {
+            Multimap<String, ClassLevelConstraint> result = HashMultimap.create();
+            parser.nextTag();
+            parser.require(XmlPullParser.START_TAG, null, "classes");
+            while (parser.next() != XmlPullParser.END_TAG) {
+                if (parser.getEventType() != XmlPullParser.START_TAG) {
+                    continue;
+                }
+                parser.require(XmlPullParser.START_TAG, null, "class");
+                String className = parser.getAttributeValue(null, "name");
+                readAndAppendLevels(parser, result, className);
+            }
+            return result;
+        }
+
+        private void readAndAppendLevels(XmlPullParser parser, Multimap<String, ClassLevelConstraint> result, String className) throws IOException, XmlPullParserException {
+            while (parser.next() != XmlPullParser.END_TAG) {
+                if (parser.getEventType() != XmlPullParser.START_TAG) {
+                    continue;
+                }
+                parser.require(XmlPullParser.START_TAG, null, "level");
+                int level = Integer.valueOf(parser.getAttributeValue(null, "value"));
+                readAndAppendItems(parser, result, className, level);
+            }
+            parser.require(XmlPullParser.END_TAG, null, "class");
+        }
+
+        private void readAndAppendItems(XmlPullParser parser, Multimap<String, ClassLevelConstraint> result, String className, int level) throws IOException, XmlPullParserException {
+            ClassLevelConstraint constraint = new ClassLevelConstraint(className, level);
+            while (parser.next() != XmlPullParser.END_TAG) {
+                if (parser.getEventType() != XmlPullParser.START_TAG) {
+                    continue;
+                }
+                parser.require(XmlPullParser.START_TAG, null, "item");
+                String spellName = parser.nextText();
+                result.put(spellName, constraint);
+            }
+            parser.require(XmlPullParser.END_TAG, null, "level");
         }
 
         /**
