@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+    <class name="Bard">
+        <level value="0">
+            <item>Blade Ward</item>
+            <item>Dancing Lights</item>
+            <item>Friends</item>
+            <item>Light</item>
+            <item>Mage Hand</item>
+            <item>Mending</item>
+            <item>Message</item>
+            <item>Minor Illusion</item>
+            <item>Prestidigitation</item>
+            <item>True Strike</item>
+            <item>Vicious Mockery</item>
+        </level>
+        <level value="1">
+            <item>Animal Friendship</item>
+            <item>Bane</item>
+            <item>Charm Person</item>
+            <item>Comprehend Languages</item>
+            <item>Cure Wounds</item>
+            <item>Detect Magic</item>
+            <item>Disguise Self</item>
+            <item>Dissonant Whispers</item>
+            <item>Faerie Fire</item>
+            <item>Feather Fall</item>
+            <item>Healing Word</item>
+            <item>Heroism</item>
+            <item>Identify</item>
+            <item>illusory Script</item>
+            <item>Longstrider</item>
+            <item>Silent Image</item>
+            <item>Sleep</item>
+            <item>Speak with Animals</item>
+            <item>Tasha's Hideous Laughter</item>
+            <item>Thunderwave</item>
+            <item>Unseen Servant</item>
+        </level>
+        <level value="2">
+            <item>Animal Messenger</item>
+            <item>Blindness/Deafness</item>
+            <item>Calm Emotions</item>
+            <item>Cloud of Daggers</item>
+            <item>Crown of Madness</item>
+            <item>Detect Thoughts</item>
+            <item>Enhance Ability</item>
+            <item>Enthrall</item>
+            <item>Heat Metal</item>
+            <item>Hold Person</item>
+            <item>Invisibility</item>
+            <item>Knock</item>
+            <item>Lesser Restoration</item>
+            <item>Locate Animals or Plants</item>
+            <item>Locate Object</item>
+            <item>Magic Mouth</item>
+            <item>Phantasmal Force</item>
+            <item>See Invisibility</item>
+            <item>Shatter</item>
+            <item>Silence</item>
+            <item>Suggestion</item>
+            <item>Zone of Truth</item>
+        </level>
+        <level value="3">
+            <item>Bestow Curse</item>
+            <item>Clairvoyance</item>
+            <item>Dispel Magic</item>
+            <item>Fear</item>
+            <item>Feign Death</item>
+            <item>Glyph of Warding</item>
+            <item>Hypnotic Pattern</item>
+            <item>Leomund's Tiny Hut</item>
+            <item>Major Image</item>
+            <item>Nondetection</item>
+            <item>Plant Growth</item>
+            <item>Sending</item>
+            <item>Speak with Dead</item>
+            <item>Speak with Plants</item>
+            <item>Stinking Cloud</item>
+            <item>Tongues</item>
+        </level>
+        <level value="4">
+            <item>Compulsion</item>
+            <item>Confusion</item>
+            <item>Dimension Door</item>
+            <item>Freedom of Movement</item>
+            <item>Greater Invisibility</item>
+            <item>Hallucinatory Terrain</item>
+            <item>Locate Creature</item>
+            <item>Polymorph</item>
+        </level>
+        <level value="5">
+            <item>Animate Objects</item>
+            <item>Awaken</item>
+            <item>Dominate Person</item>
+            <item>Dream</item>
+            <item>Geas</item>
+            <item>Greater Restoration</item>
+            <item>Hold Monster</item>
+            <item>Legend Lore</item>
+            <item>Mass Cure Wounds</item>
+            <item>Mislead</item>
+            <item>Modify Memory</item>
+            <item>Planar Binding</item>
+            <item>Raise Dead</item>
+            <item>Scrying</item>
+            <item>Seeming</item>
+            <item>Teleportation Circle</item>
+        </level>
+        <level value="6">
+            <item>Eyebite</item>
+            <item>Find the Path</item>
+            <item>Guards and Wards</item>
+            <item>Mass Suggestion</item>
+            <item>Otto's irresistible Dance</item>
+            <item>Programmed Illusion</item>
+            <item>True Seeing</item>
+        </level>
+        <level value="7">
+            <item>Etherealness</item>
+            <item>Forcecage</item>
+            <item>Mirage Arcane</item>
+            <item>Mordenkainen's Magniﬁcent Mansion</item>
+            <item>Mordenkainen's Sword</item>
+            <item>Project Image</item>
+            <item>Regenerate</item>
+            <item>Resurrection</item>
+            <item>Symbol</item>
+            <item>Teleport</item>
+        </level>
+        <level value="8">
+            Dominate Monster
+            Feeblemind
+            Glibness
+            Mind Blank
+            Power Word Stun
+        </level>
+        <level value="9">
+            <item>Foresight</item>
+            <item>Power Word Heal</item>
+            <item>Power Word Kill</item>
+            <item>True Polymorph</item>
+        </level>
+    </class>
+    <class name="Cleric">
+        <level value="0">
+            <item>Guidance</item>
+            <item>Light</item>
+            <item>Mending</item>
+            <item>Resistance</item>
+            <item>Sacred Flame</item>
+            <item>Spare the Dying</item>
+            <item>Thaumaturgy</item>
+        </level>
+        <level value="1">
+            <item>Bane</item>
+            <item>Bless</item>
+            <item>Command</item>
+            <item>Create or Destroy Water</item>
+            <item>Cure Wounds</item>
+            <item>Detect Evil and Good</item>
+            <item>Detect Magic</item>
+            <item>Detect Poison and Disease</item>
+            <item>Guiding Bolt</item>
+            <item>Healing Word</item>
+            <item>Inflict Wounds</item>
+            <item>Protection from</item>
+            <item>Evil and Good</item>
+            <item>Purify Food and Drink</item>
+            <item>Sanctuary</item>
+            <item>Shield of Faith</item>
+        </level>
+        <level value="2">
+            <item>Aid</item>
+            <item>Augury</item>
+            <item>Blindness-Deafness</item>
+            <item>Calm Emotions</item>
+            <item>Continual Flame</item>
+            <item>Enhance Ability</item>
+            <item>Find Traps</item>
+            <item>Gentle Repose</item>
+            <item>Hold Person</item>
+            <item>Lesser Restoration</item>
+            <item>Locate Object</item>
+            <item>Prayer of Healing</item>
+            <item>Protection from Poison</item>
+            <item>Silence</item>
+            <item>Spiritual Weapon</item>
+            <item>Warding Bond</item>
+            <item>Zone ofTruth</item>
+        </level>
+        <level value="3">
+            <item>Animate Dead</item>
+            <item>Beacon of Hope</item>
+            <item>Bestow Curse</item>
+            <item>Clairvoyance</item>
+            <item>Create Food and Water</item>
+            <item>Daylight</item>
+            <item>Dispel Magic</item>
+            <item>Feign Death</item>
+            <item>Glyph of Warding</item>
+            <item>Magic Circle</item>
+            <item>Mass Healing Word</item>
+            <item>Meld into Stone</item>
+            <item>Protection from Energy</item>
+            <item>Remove Curse</item>
+            <item>Revivify</item>
+            <item>Sending</item>
+            <item>Speak with Dead</item>
+            <item>Spirit Guardians</item>
+            <item>Tongues</item>
+            <item>Water Walk</item>
+        </level>
+        <level value="4">
+            <item>Banishment</item>
+            <item>Control Water</item>
+            <item>Death Ward</item>
+            <item>Divination</item>
+            <item>Freedom otMovement</item>
+            <item>Guardian of Faith</item>
+            <item>Locate Creature</item>
+            <item>Stone Shape</item>
+        </level>
+        <level value="5">
+            <item>Commune</item>
+            <item>Contagion</item>
+            <item>Dispel Evil and Good</item>
+            <item>Flame Strike</item>
+            <item>Geas</item>
+            <item>Greater Restoration</item>
+            <item>Hallow</item>
+            <item>Insect Plague</item>
+            <item>Legend Lore</item>
+            <item>Mass Cure Wounds</item>
+            <item>Planar Binding</item>
+            <item>Raise Dead</item>
+            <item>Scrying</item>
+        </level>
+        <level value="6">
+            <item>Blade Barrier</item>
+            <item>Create Undead</item>
+            <item>Find the Path</item>
+            <item>Forbiddance</item>
+            <item>Harm</item>
+            <item>Heal</item>
+            <item>Heroes' Feast</item>
+            <item>Planar Ally</item>
+            <item>True Seeing</item>
+            <item>Word of Recall</item>
+        </level>
+        <level value="7">
+            <item>Conjure Celestial</item>
+            <item>Divine Word</item>
+            <item>Etherealness</item>
+            <item>Fire Storm</item>
+            <item>Plane Shift</item>
+            <item>Regenerate</item>
+            <item>Resurrection</item>
+            <item>Symbol</item>
+        </level>
+        <level value="8">
+            <item>Antimagic Field</item>
+            <item>Control Weather</item>
+            <item>Earthquake</item>
+            <item>Holy Aura</item>
+        </level>
+        <level value="9">
+            <item>Astral Projection</item>
+            <item>Gate</item>
+            <item>Mass Heal</item>
+            <item>True Resurrection</item>
+        </level>
+    </class>
+    <class name="Druid">
+        <level value="0">
+            <item>Druidcraft</item>
+            <item>Guidance</item>
+            <item>Mending</item>
+            <item>Poison Spray</item>
+            <item>Produce Flame</item>
+            <item>Resistance</item>
+            <item>Shillelagh</item>
+            <item>Thorn Whip</item>
+        </level>
+        <level value="1">
+            <item>Animal Friendship</item>
+            <item>Charm Person</item>
+            <item>Create or Destroy Water</item>
+            <item>Cure Wounds</item>
+            <item>Detect Magic</item>
+            <item>Detect Poison and Disease</item>
+            <item>Entangle</item>
+            <item>Faerie Fire</item>
+            <item>Fog Cloud</item>
+            <item>Goodberry</item>
+            <item>Healing Word</item>
+            <item>Jump</item>
+            <item>Longstrider</item>
+            <item>Purify Food and Drink</item>
+            <item>Speak with Animals</item>
+            <item>Thunderwave</item>
+        </level>
+        <level value="2">
+            <item>Animal Messenger</item>
+            <item>Barkskin</item>
+            <item>Beast Sense</item>
+            <item>Darkvision</item>
+            <item>Enhance Ability</item>
+            <item>Find Traps</item>
+            <item>Flame Blade</item>
+            <item>Flaming Sphere</item>
+            <item>Gust of Wind</item>
+            <item>Heat Metal</item>
+            <item>Hold Person</item>
+            <item>Lesser Restoration</item>
+            <item>Locate Animals or Plants</item>
+            <item>Locate Object</item>
+            <item>Moonbeam</item>
+            <item>Pass without Trace</item>
+            <item>Protection from Poison</item>
+            <item>Spike Growth</item>
+        </level>
+        <level value="3">
+            Call Lightning
+            Conjure Animals
+            Daylight
+            Dispel Magic
+            Feign Death
+            Meld into Stone
+            Plant Growth
+            Protection from Energy
+            Sleet Storm
+            Speak with Plants
+            Water Breathing
+            Water Walk
+            Wind Wall
+        </level>
+        <level value="4">
+            <item>Blight</item>
+            <item>Confusion</item>
+            <item>Conjure Minor Elementals</item>
+            <item>Conjure Woodland Beings</item>
+            <item>Control Water</item>
+            <item>Dominate Beast</item>
+            <item>Freedom of Movement</item>
+            <item>Giant Insect</item>
+            <item>Grasping Vine</item>
+            <item>Hallucinatory Terrain</item>
+            <item>lce Storm</item>
+            <item>Locate Creature</item>
+            <item>Polymorph</item>
+            <item>Stone Shape</item>
+            <item>Stoneskin</item>
+            <item>Wall of Fire</item>
+        </level>
+        <level value="5">
+            <item>Antilife Shell</item>
+            <item>Awaken</item>
+            <item>Commune with Nature</item>
+            <item>Conjure Elemental</item>
+            <item>Contagion</item>
+            <item>Geas</item>
+            <item>Greater Restoration</item>
+            <item>insect Plague</item>
+            <item>Mass Cure Wounds</item>
+            <item>Planar Binding</item>
+            <item>Reincarnate</item>
+            <item>Scrying</item>
+            <item>Tree Stride</item>
+            <item>Wall of Stone</item>
+        </level>
+        <level value="6">
+            <item>Conjure Fey</item>
+            <item>Find the Path</item>
+            <item>Heal</item>
+            <item>Heroes’ Feast</item>
+            <item>Move Earth</item>
+            <item>Sunbeam</item>
+            <item>Transport Via Plants</item>
+            <item>Wall ofThorns</item>
+            <item>Wind Walk</item>
+        </level>
+        <level value="7">
+            <item>Fire Storm</item>
+            <item>Mirage Arcane</item>
+            <item>Plane Shift</item>
+            <item>Regenerate</item>
+            <item>Reverse Gravity</item>
+        </level>
+        <level value="8">
+            <item>Animal Shapes</item>
+            <item>Antipathy/Sympathy</item>
+            <item>Control Weather</item>
+            <item>Earthquake</item>
+            <item>Feeblemind</item>
+            <item>Sunburst</item>
+            <item>Tsunami</item>
+        </level>
+        <level value="9">
+            <item>Foresight</item>
+            <item>Shapechange</item>
+            <item>Storm ofVengeance</item>
+            <item>True Resurrection</item>
+        </level>
+    </class>
+    <class name="Paladin">
+        <level value="1">
+            <item>Bless</item>
+            <item>Command</item>
+            <item>Compelled Duel</item>
+            <item>Cure Wounds</item>
+            <item>Detect Evil and Good</item>
+            <item>Detect Magic</item>
+            <item>Detect Poison and Disease</item>
+            <item>Divine Favor</item>
+            <item>Heroism</item>
+            <item>Protection from</item>
+            <item>Evil and Good</item>
+            <item>Purify Food and Drink</item>
+            <item>Searing Smite</item>
+            <item>Shield of Faith</item>
+            <item>Thunderous Smite</item>
+            <item>Wrathful Smite</item>
+        </level>
+        <level value="2">
+            <item>Aid</item>
+            <item>Branding Smite</item>
+            <item>Find Steed</item>
+            <item>Lesser Restoration</item>
+            <item>Locate Object</item>
+            <item>Magic Weapon</item>
+            <item>Protection from Poison</item>
+            <item>Zone ofTruth</item>
+        </level>
+        <level value="3">
+            <item>Aura otVitality</item>
+            <item>Blinding Smite</item>
+            <item>Create Food and Water</item>
+            <item>Crusader's Mantle</item>
+            <item>Daylight</item>
+            <item>Dispel Magic</item>
+            <item>Elemental Weapon</item>
+            <item>Magic Circle</item>
+            <item>Remove Curse</item>
+            <item>Revivify</item>
+        </level>
+        <level value="4">
+            <item>Aura of Life</item>
+            <item>Aura of Purity</item>
+            <item>Banishment</item>
+            <item>Death Ward</item>
+            <item>Locate Creature</item>
+            <item>Staggering Smite</item>
+        </level>
+        <level value="5">
+            <item>Banishing Smite</item>
+            <item>Circle of Power</item>
+            <item>Destructive Smite</item>
+            <item>Dispel Evil and Good</item>
+            <item>Geas</item>
+            <item>Raise Dead</item>
+        </level>
+    </class>
+    <class name="Ranger">
+        <level value="1">
+            <item>Alarm</item>
+            <item>Animal Friendship</item>
+            <item>Cure Wounds</item>
+            <item>Detect Magic</item>
+            <item>Detect Poison and Disease</item>
+            <item>Ensnaring Strike</item>
+            <item>Fog Cloud</item>
+            <item>Goodberry</item>
+            <item>Hail of Thorns</item>
+            <item>Hunter's Mark</item>
+            <item>Jump</item>
+            <item>Longstrider</item>
+            <item>Speak with Animals</item>
+        </level>
+        <level value="2">
+            <item>Animal Messenger</item>
+            <item>Barkskin</item>
+            <item>Beast Sense</item>
+            <item>Cordon of Arrows</item>
+            <item>Darkvision</item>
+            <item>Find Traps</item>
+            <item>Lesser Restoration</item>
+            <item>Locate Animals or Plants</item>
+            <item>Locate Object</item>
+            <item>Pass without Trace</item>
+            <item>Protection from Poison</item>
+            <item>SHence</item>
+            <item>Spike Growth</item>
+        </level>
+        <level value="3">
+            <item>Conjure Animals</item>
+            <item>Conjure Barrage</item>
+            <item>Daylight</item>
+            <item>Lightning Arrow</item>
+            <item>Nondetection</item>
+            <item>Plant Growth</item>
+            <item>Protection from Energy</item>
+            <item>Speak with Plants</item>
+            <item>Water Breathing</item>
+            <item>Water Walk</item>
+            <item>Wind Wall</item>
+        </level>
+        <level value="4">
+            <item>Conjure Woodland Beings</item>
+            <item>Freedom of Movement</item>
+            <item>Grasping Vine</item>
+            <item>Locate Creature</item>
+            <item>Stoneskin</item>
+        </level>
+        <level value="5">
+            <item>Commune with Nature</item>
+            <item>Conjure Volley</item>
+            <item>Swift Quiver</item>
+            <item>Tree Stride</item>
+        </level>
+    </class>
+    <class name="Sorcerer">
+        <level value="0">
+            <item>Acid Splash</item>
+            <item>Blade Ward</item>
+            <item>Chill Touch</item>
+            <item>Dancing Lights</item>
+            <item>Fire Bolt</item>
+            <item>Friends</item>
+            <item>Light</item>
+            <item>Mage Hand</item>
+            <item>Mending</item>
+            <item>Message</item>
+            <item>Minor Illusion</item>
+            <item>Poison Spray</item>
+            <item>Prestidigitation</item>
+            <item>Ray of Frost</item>
+            <item>Shocking Grasp</item>
+            <item>True Strike</item>
+        </level>
+        <level value="1">
+            <item>Burning Hands</item>
+            <item>Charm Person</item>
+            <item>Chromatic Orb</item>
+            <item>Color Spray</item>
+            <item>Comprehend Languages</item>
+            <item>Detect Magic</item>
+            <item>Disguise Self</item>
+            <item>Expeditious Retreat</item>
+            <item>False Life</item>
+            <item>Feather Fall</item>
+            <item>Fog Cloud</item>
+            <item>Jump</item>
+            <item>Mage Armor</item>
+            <item>Magic Missile</item>
+            <item>Ray of Sickness</item>
+            <item>Shield</item>
+            <item>Silent Image</item>
+            <item>Sleep</item>
+            <item>Thunderwave</item>
+            <item>Witch Bolt</item>
+        </level>
+        <level value="2">
+            <item>Alter Self</item>
+            <item>Blindness-Deafness</item>
+            <item>Blur</item>
+            <item>Cloud of Daggers</item>
+            <item>Crown of Madness</item>
+            <item>Darkness</item>
+            <item>DarkVision</item>
+            <item>Detect Thoughts</item>
+            <item>Enhance Ability</item>
+            <item>Enlarge/Reduce</item>
+            <item>Gust ofWind</item>
+            <item>Hold Person</item>
+            <item>invisibility</item>
+            <item>Knock</item>
+            <item>Levitate</item>
+            <item>Mirror Image</item>
+            <item>Misty Step</item>
+            <item>Phantasmal Force</item>
+            <item>Scorching Ray</item>
+            <item>See Invisibility</item>
+            <item>Shatter</item>
+            <item>Spider Climb</item>
+            <item>Suggestion</item>
+            <item>Web</item>
+        </level>
+        <level value="3">
+            <item>Blink</item>
+            <item>Clairvoyance</item>
+            <item>Counterspell</item>
+            <item>Daylight</item>
+            <item>Dispel Magic</item>
+            <item>Fear</item>
+            <item>Fireball</item>
+            <item>Fly</item>
+            <item>Gaseous Form</item>
+            <item>Haste</item>
+            <item>Hypnotic Pattern</item>
+            <item>Lightning Bolt</item>
+            <item>Major Image</item>
+            <item>Protection from Energy</item>
+            <item>Sleet Storm</item>
+            <item>Slow</item>
+            <item>Stinking Cloud</item>
+            <item>Tongues</item>
+            <item>Water Breathing</item>
+            <item>Water Walk</item>
+        </level>
+        <level value="4">
+            <item>Banishment</item>
+            <item>Blight</item>
+            <item>Confusion</item>
+            <item>Dimension Door</item>
+            <item>Dominate Beast</item>
+            <item>Greater invisibility</item>
+            <item>Ice Storm</item>
+            <item>Polymorph</item>
+            <item>Stoneskin</item>
+            <item>Wall of Fire</item>
+        </level>
+        <level value="5">
+            <item>Animate Objects</item>
+            <item>Cloudkill</item>
+            <item>Cone of Cold</item>
+            <item>Creation</item>
+            <item>Dominate Person</item>
+            <item>Hold Monster</item>
+            <item>Insect Plague</item>
+            <item>Seeming</item>
+            <item>Telekinesis</item>
+            <item>Teleportation Circle</item>
+            <item>Wall of Stone</item>
+        </level>
+        <level value="6">
+            <item>Arcane Gate</item>
+            <item>Chain Lightning</item>
+            <item>Circle of Death</item>
+            <item>Disintegrate</item>
+            <item>Eyebite</item>
+            <item>Globe of Invulnerability</item>
+            <item>Mass Suggestion</item>
+            <item>Move Earth</item>
+            <item>Sunbeam</item>
+            <item>True Seeing</item>
+        </level>
+        <level value="7">
+            <item>Delayed Blast Fireball</item>
+            <item>Etherealness</item>
+            <item>Finger of Death</item>
+            <item>Fire Storm</item>
+            <item>Plane Shift</item>
+            <item>Prismatic Spray</item>
+            <item>Reverse Gravity</item>
+            <item>Teleport</item>
+        </level>
+        <level value="8">
+            <item>Dominate Monster</item>
+            <item>Earthquake</item>
+            <item>Incendiary Cloud</item>
+            <item>Power Word Stun</item>
+            <item>Sunburst</item>
+        </level>
+        <level value="9">
+            <item>Gate</item>
+            <item>Meteor Swarm</item>
+            <item>Power Word Kill</item>
+            <item>Time Stop</item>
+            <item>Wish</item>
+        </level>
+    </class>
+    <class name="Warlock">
+        <level value="0">
+            <item>Blade Ward</item>
+            <item>Chill Touch</item>
+            <item>Eldritch Blast</item>
+            <item>Friends</item>
+            <item>Mage Hand</item>
+            <item>Minor Illusion</item>
+            <item>Poison Spray</item>
+            <item>Prestidigitation</item>
+            <item>True Strike</item>
+        </level>
+        <level value="1">
+            <item>Armor of Agathys</item>
+            <item>Arms of Hadar</item>
+            <item>Charm Person</item>
+            <item>Comprehend Languages</item>
+            <item>Expeditious Retreat</item>
+            <item>Hellish Rebuke</item>
+            <item>Hex</item>
+            <item>Illusory Script</item>
+            <item>Protection from</item>
+            <item>Evil and Good</item>
+            <item>Unseen Servant</item>
+            <item>Witch Bolt</item>
+        </level>
+        <level value="2">
+            <item>Cloud of Daggers</item>
+            <item>Crown of Madness</item>
+            <item>Darkness</item>
+            <item>Enthrall</item>
+            <item>Hold Person</item>
+            <item>Invisibility</item>
+            <item>Mirror Image</item>
+            <item>Misty Step</item>
+            <item>Ray of Enfeeblement</item>
+            <item>Shatter</item>
+            <item>Spider Climb</item>
+            <item>Suggestion</item>
+        </level>
+        <level value="3">
+            <item>Counterspell</item>
+            <item>Dispel Magic</item>
+            <item>Fear</item>
+            <item>Fly</item>
+            <item>Gaseous Form</item>
+            <item>Hunger of Hadar</item>
+            <item>Hypnotic Pattern</item>
+            <item>Magic Circle</item>
+            <item>Major Image</item>
+            <item>Remove Curse</item>
+            <item>Tongues</item>
+            <item>Vampiric Touch</item>
+        </level>
+        <level value="4">
+            <item>Banishment</item>
+            <item>Blight</item>
+            <item>Dimension Door</item>
+            <item>Hallucinatory Terrain</item>
+        </level>
+        <level value="5">
+            <item>Contact Other Plane</item>
+            <item>Dream</item>
+            <item>Hold Monster</item>
+            <item>Scrying</item>
+        </level>
+        <level value="6">
+            <item>Arcane Gate</item>
+            <item>Circle of Death</item>
+            <item>Conjure Fey</item>
+            <item>Create Undead</item>
+            <item>Eyebite</item>
+            <item>Flesh to Stone</item>
+            <item>Mass Suggestion</item>
+            <item>True Seeing</item>
+        </level>
+        <level value="7">
+            <item>Etherealness</item>
+            <item>Finger of Death</item>
+            <item>Forcecage</item>
+            <item>Plane Shift</item>
+        </level>
+        <level value="8">
+            <item>Demiplane</item>
+            <item>Dominate Monster</item>
+            <item>Feeblemind</item>
+            <item>Glibness</item>
+            <item>Power Word Stun</item>
+        </level>
+        <level value="9">
+            <item>Astral Projection</item>
+            <item>Foresight</item>
+            <item>Imprisonment</item>
+            <item>Power Word Kill</item>
+            <item>True Polymorph</item>
+        </level>
+    </class>
+    <class name="Wizard">
+        <level value="0">
+            <item>Acid Splash</item>
+            <item>Blade Ward</item>
+            <item>Chill Touch</item>
+            <item>Dancing Lights</item>
+            <item>Fire Bolt</item>
+            <item>Friends</item>
+            <item>Light</item>
+            <item>Mage Hand</item>
+            <item>Mending</item>
+            <item>Message</item>
+            <item>Minor Illusion</item>
+            <item>Poison Spray</item>
+            <item>Prestidigitation</item>
+            <item>Ray of Frost</item>
+            <item>Shocking Grasp</item>
+            <item>True Strike</item>
+        </level>
+        <level value="1">
+            <item>Alarm</item>
+            <item>Burning Hands</item>
+            <item>Charm Person</item>
+            <item>Chromatic Orb</item>
+            <item>Color Spray</item>
+            <item>Comprehend Languages</item>
+            <item>Detect Magic</item>
+            <item>Disguise Self</item>
+            <item>Expeditious Retreat</item>
+            <item>False Life</item>
+            <item>Feather Fall</item>
+            <item>Find Familiar</item>
+            <item>Fog Cloud</item>
+            <item>Grease</item>
+            <item>Identify</item>
+            <item>Illusory Script</item>
+            <item>Jump</item>
+            <item>Longstrider</item>
+            <item>Mage Armor</item>
+            <item>Magic Missile</item>
+            <item>Protection from</item>
+            <item>Evil and Good</item>
+            <item>Ray of Sickness</item>
+            <item>Shield</item>
+            <item>Silent Image</item>
+            <item>Sleep</item>
+            <item>Tasha’s Hideous Laughter</item>
+            <item>Tenser’s Floating Disk</item>
+            <item>Thunderwave</item>
+            <item>Unseen Servant</item>
+            <item>Witch Bolt</item>
+        </level>
+        <level value="2">
+            <item>Alter Self</item>
+            <item>Arcane Lock</item>
+            <item>Blindness/Deafness</item>
+            <item>Blur</item>
+            <item>Cloud of Daggers</item>
+            <item>Continual Flame</item>
+            <item>Crown of Madness</item>
+            <item>Darkness</item>
+            <item>Darkvision</item>
+            <item>Detect Thoughts</item>
+            <item>Enlarge/Reduce</item>
+            <item>Flaming Sphere</item>
+            <item>Gentle Repose</item>
+            <item>Gust ofWind</item>
+            <item>Hold Person</item>
+            <item>Invisibility</item>
+            <item>Knock</item>
+            <item>Levitate</item>
+            <item>Locate Object</item>
+            <item>Magic Mouth</item>
+            <item>Magic Weapon</item>
+            <item>Melf's Acid Arrow</item>
+            <item>Mirror Image</item>
+            <item>Misty Step</item>
+            <item>Nystul's Magic Aura</item>
+            <item>Phantasmal Force</item>
+            <item>Ray of Enfeeblement</item>
+            <item>Rope Trick</item>
+            <item>Scorching Ray</item>
+            <item>See Invisibility</item>
+            <item>Shatter</item>
+            <item>Spider Climb</item>
+            <item>Suggestion</item>
+            <item>Web</item>
+        </level>
+        <level value="3">
+            <item>Animate Dead</item>
+            <item>Bestow Curse</item>
+            <item>Blink</item>
+            <item>Clairvoyance</item>
+            <item>Counterspell</item>
+            <item>Dispel Magic</item>
+            <item>Fear</item>
+            <item>Feign Death</item>
+            <item>Fireball</item>
+            <item>Fly</item>
+            <item>Gaseous Form</item>
+            <item>Glyph oFWarding</item>
+            <item>Haste</item>
+            <item>Hypnotic Pattern</item>
+            <item>Leomund's Tiny Hut</item>
+            <item>Lightning Bolt</item>
+            <item>Magic Circle</item>
+            <item>Major image</item>
+            <item>Nondetection</item>
+            <item>Phantom Steed</item>
+            <item>Protection from Energy</item>
+            <item>Remove Curse</item>
+            <item>Sending</item>
+            <item>Sleet Storm</item>
+            <item>Slow</item>
+            <item>Stinking Cloud</item>
+            <item>Tbngues</item>
+            <item>Vampiric Touch</item>
+            <item>Water Breathing</item>
+        </level>
+        <level value="4">
+            <item>Arcane Eye</item>
+            <item>Banishment</item>
+            <item>Blight</item>
+            <item>Confusion</item>
+            <item>Conjure Minor Elementals</item>
+            <item>Control Water</item>
+            <item>Dimension Door</item>
+            <item>Evard's Black Tentacles</item>
+            <item>Fabricate</item>
+            <item>Fire Shield</item>
+            <item>Greater Invisibility</item>
+            <item>Hallucinatory Terrain</item>
+            <item>Ice Storm</item>
+            <item>Leomund's Secret Chest</item>
+            <item>Locate Creature</item>
+            <item>Mordenkainen’s</item>
+            <item>Faithful Hound</item>
+            <item>Mordenkainen's</item>
+            <item>Private Sanctum</item>
+            <item>Otiluke's Resilient Sphere</item>
+            <item>Phantasmal Killer</item>
+            <item>Polymorph</item>
+            <item>Stone Shape</item>
+            <item>Stoneskin</item>
+            <item>Wall of Fire</item>
+        </level>
+        <level value="5">
+            <item>Animate Objects</item>
+            <item>Bigby's Hand</item>
+            <item>Cloudkill</item>
+            <item>Cone of Cold</item>
+            <item>Conjure Elemental</item>
+            <item>Contact Other Plane</item>
+            <item>Creation</item>
+            <item>Dominate Person</item>
+            <item>Dream</item>
+            <item>Geas</item>
+            <item>Hold Monster</item>
+            <item>Legend Lore</item>
+            <item>Mislead</item>
+            <item>Modify Memory</item>
+            <item>Passwall</item>
+            <item>Planar Binding</item>
+            <item>Rary's Telepathic Bond</item>
+            <item>Scrying</item>
+            <item>Seeming</item>
+            <item>Telekinesis</item>
+            <item>Teleportation Circle</item>
+            <item>Wall of Force</item>
+            <item>Wall of Stone</item>
+        </level>
+        <level value="6">
+            <item>Arcane Gate</item>
+            <item>Chain Lightning</item>
+            <item>Circle of Death</item>
+            <item>Contingency</item>
+            <item>Create Undead</item>
+            <item>Disintegrate</item>
+            <item>Drawmij's Instant</item>
+            <item>Summons</item>
+            <item>Eyebite</item>
+            <item>Flesh to Stone</item>
+            <item>Globe of Invulnerability</item>
+            <item>Guards and Wards</item>
+            <item>Magic Jar</item>
+            <item>Mass Suggestion</item>
+            <item>Move Earth</item>
+            <item>Otiluke’s Freezing Sphere</item>
+            <item>Otto's Irresistible Dance</item>
+            <item>Programmed Illusion</item>
+            <item>Sunbeam</item>
+            <item>True Seeing</item>
+            <item>Wall of Ice</item>
+        </level>
+        <level value="7">
+            <item>Delayed Blast Fireball</item>
+            <item>Etherealness</item>
+            <item>Finger of Death</item>
+            <item>Forcecage</item>
+            <item>Mirage Arcane</item>
+            <item>Mordenkainen's Magniﬁcent Mansion</item>
+            <item>Mordenkainen's Sword</item>
+            <item>Plane Shift</item>
+            <item>Prismatic Spray</item>
+            <item>Project Image</item>
+            <item>Reverse Gravity</item>
+            <item>Sequester</item>
+            <item>Simulacrum</item>
+            <item>Symbol</item>
+            <item>Teleport</item>
+        </level>
+        <level value="8">
+            <item>Antimagic Field</item>
+            <item>Antipathy-Sympathy</item>
+            <item>Clone</item>
+            <item>Control Weather</item>
+            <item>Demiplane</item>
+            <item>Dominate Monster</item>
+            <item>Feeblemind</item>
+            <item>Incendiary Cloud</item>
+            <item>Maze</item>
+            <item>Mind Blank</item>
+            <item>Power Word Stun</item>
+            <item>Sunburst</item>
+            <item>Telepathy</item>
+            <item>Trap the Soul</item>
+        </level>
+        <level value="9">
+            <item>Astral Projection</item>
+            <item>Foresight</item>
+            <item>Gate</item>
+            <item>Imprisonment</item>
+            <item>Meteor Swarm</item>
+            <item>Power Word Kill</item>
+            <item>Prismatic Wall</item>
+            <item>Shapechange</item>
+            <item>Time Stop</item>
+            <item>True Polymorph</item>
+            <item>Weird</item>
+            <item>Wish</item>
+        </level>
+    </class>
+</classes>
