@@ -14,12 +14,13 @@ import org.dnd5spellbook.domain.Spell;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Adapter to use spells in a list view
  */
-public class SpellAdapter extends BaseAdapter implements Filterable {
+public class SpellAdapter extends BaseAdapter implements Filterable, Iterable<Spell> {
     private Activity context;
     private List<Spell> originalValues;
     private List<Spell> filteredValues;
@@ -81,6 +82,14 @@ public class SpellAdapter extends BaseAdapter implements Filterable {
             this.label = label;
             this.image = image;
         }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Iterator<Spell> iterator() {
+        return Collections.unmodifiableCollection(filteredValues).iterator();
     }
 
     /**
