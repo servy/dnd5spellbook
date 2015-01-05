@@ -1,12 +1,14 @@
 # What is it?
 
 This is an android application aimed to help casters playing Dungeons & Dragons 5 edition. It
-lets you navigate through spells and see their details. Planned features to be implemented
-soon (hopefully):
+lets you navigate through spells and see their details. Currently implemented features:
 
-- add all spells from dnd edition 5;
-- search spells by name / description;
-- mark spells as favorites and switch between "favorites only" and "all spells" modes.
+- browse all spells from dnd edition 5 and their descriptions;
+- filter spells by name;
+- mark spells as favorites and switch between "favorites only" and "all spells" modes;
+
+Planned features to be implemented soon (hopefully):
+
 - distinguish different class spells in the list by color and/or icon; class based filtering
   of spells.
 
