@@ -28,7 +28,7 @@
             <item>Healing Word</item>
             <item>Heroism</item>
             <item>Identify</item>
-            <item>illusory Script</item>
+            <item>Illusory Script</item>
             <item>Longstrider</item>
             <item>Silent Image</item>
             <item>Sleep</item>
@@ -39,7 +39,7 @@
         </level>
         <level value="2">
             <item>Animal Messenger</item>
-            <item>Blindness/Deafness</item>
+            <item>Blindness-Deafness</item>
             <item>Calm Emotions</item>
             <item>Cloud of Daggers</item>
             <item>Crown of Madness</item>
@@ -112,7 +112,7 @@
             <item>Find the Path</item>
             <item>Guards and Wards</item>
             <item>Mass Suggestion</item>
-            <item>Otto's irresistible Dance</item>
+            <item>Otto's Irresistible Dance</item>
             <item>Programmed Illusion</item>
             <item>True Seeing</item>
         </level>
@@ -120,7 +120,7 @@
             <item>Etherealness</item>
             <item>Forcecage</item>
             <item>Mirage Arcane</item>
-            <item>Mordenkainen's Magniﬁcent Mansion</item>
+            <item>Mordenkainen's Magnificent Mansion</item>
             <item>Mordenkainen's Sword</item>
             <item>Project Image</item>
             <item>Regenerate</item>
@@ -164,8 +164,7 @@
             <item>Guiding Bolt</item>
             <item>Healing Word</item>
             <item>Inflict Wounds</item>
-            <item>Protection from</item>
-            <item>Evil and Good</item>
+            <item>Protection from Evil and Good</item>
             <item>Purify Food and Drink</item>
             <item>Sanctuary</item>
             <item>Shield of Faith</item>
@@ -187,7 +186,7 @@
             <item>Silence</item>
             <item>Spiritual Weapon</item>
             <item>Warding Bond</item>
-            <item>Zone ofTruth</item>
+            <item>Zone of Truth</item>
         </level>
         <level value="3">
             <item>Animate Dead</item>
@@ -216,7 +215,7 @@
             <item>Control Water</item>
             <item>Death Ward</item>
             <item>Divination</item>
-            <item>Freedom otMovement</item>
+            <item>Freedom of Movement</item>
             <item>Guardian of Faith</item>
             <item>Locate Creature</item>
             <item>Stone Shape</item>
@@ -321,19 +320,19 @@
             <item>Spike Growth</item>
         </level>
         <level value="3">
-            Call Lightning
-            Conjure Animals
-            Daylight
-            Dispel Magic
-            Feign Death
-            Meld into Stone
-            Plant Growth
-            Protection from Energy
-            Sleet Storm
-            Speak with Plants
-            Water Breathing
-            Water Walk
-            Wind Wall
+            <item>Call Lightning</item>
+            <item>Conjure Animals</item>
+            <item>Daylight</item>
+            <item>Dispel Magic</item>
+            <item>Feign Death</item>
+            <item>Meld into Stone</item>
+            <item>Plant Growth</item>
+            <item>Protection from Energy</item>
+            <item>Sleet Storm</item>
+            <item>Speak with Plants</item>
+            <item>Water Breathing</item>
+            <item>Water Walk</item>
+            <item>Wind Wall</item>
         </level>
         <level value="4">
             <item>Blight</item>
@@ -346,7 +345,7 @@
             <item>Giant Insect</item>
             <item>Grasping Vine</item>
             <item>Hallucinatory Terrain</item>
-            <item>lce Storm</item>
+            <item>Ice Storm</item>
             <item>Locate Creature</item>
             <item>Polymorph</item>
             <item>Stone Shape</item>
@@ -361,7 +360,7 @@
             <item>Contagion</item>
             <item>Geas</item>
             <item>Greater Restoration</item>
-            <item>insect Plague</item>
+            <item>Insect Plague</item>
             <item>Mass Cure Wounds</item>
             <item>Planar Binding</item>
             <item>Reincarnate</item>
@@ -373,11 +372,11 @@
             <item>Conjure Fey</item>
             <item>Find the Path</item>
             <item>Heal</item>
-            <item>Heroes’ Feast</item>
+            <item>Heroes' Feast</item>
             <item>Move Earth</item>
             <item>Sunbeam</item>
-            <item>Transport Via Plants</item>
-            <item>Wall ofThorns</item>
+            <item>Transport via Plants</item>
+            <item>Wall of Thorns</item>
             <item>Wind Walk</item>
         </level>
         <level value="7">
@@ -389,7 +388,7 @@
         </level>
         <level value="8">
             <item>Animal Shapes</item>
-            <item>Antipathy/Sympathy</item>
+            <item>Antipathy-Sympathy</item>
             <item>Control Weather</item>
             <item>Earthquake</item>
             <item>Feeblemind</item>
@@ -399,7 +398,7 @@
         <level value="9">
             <item>Foresight</item>
             <item>Shapechange</item>
-            <item>Storm ofVengeance</item>
+            <item>Storm of Vengeance</item>
             <item>True Resurrection</item>
         </level>
     </class>
@@ -414,8 +413,7 @@
             <item>Detect Poison and Disease</item>
             <item>Divine Favor</item>
             <item>Heroism</item>
-            <item>Protection from</item>
-            <item>Evil and Good</item>
+            <item>Protection from Evil and Good</item>
             <item>Purify Food and Drink</item>
             <item>Searing Smite</item>
             <item>Shield of Faith</item>
@@ -430,10 +428,10 @@
             <item>Locate Object</item>
             <item>Magic Weapon</item>
             <item>Protection from Poison</item>
-            <item>Zone ofTruth</item>
+            <item>Zone of Truth</item>
         </level>
         <level value="3">
-            <item>Aura otVitality</item>
+            <item>Aura of Vitality</item>
             <item>Blinding Smite</item>
             <item>Create Food and Water</item>
             <item>Crusader's Mantle</item>
@@ -455,7 +453,7 @@
         <level value="5">
             <item>Banishing Smite</item>
             <item>Circle of Power</item>
-            <item>Destructive Smite</item>
+            <item>Destructive Wave</item>
             <item>Dispel Evil and Good</item>
             <item>Geas</item>
             <item>Raise Dead</item>
@@ -489,7 +487,7 @@
             <item>Locate Object</item>
             <item>Pass without Trace</item>
             <item>Protection from Poison</item>
-            <item>SHence</item>
+            <item>Silence</item>
             <item>Spike Growth</item>
         </level>
         <level value="3">
@@ -567,13 +565,13 @@
             <item>Cloud of Daggers</item>
             <item>Crown of Madness</item>
             <item>Darkness</item>
-            <item>DarkVision</item>
+            <item>Darkvision</item>
             <item>Detect Thoughts</item>
             <item>Enhance Ability</item>
-            <item>Enlarge/Reduce</item>
-            <item>Gust ofWind</item>
+            <item>Enlarge-Reduce</item>
+            <item>Gust of Wind</item>
             <item>Hold Person</item>
-            <item>invisibility</item>
+            <item>Invisibility</item>
             <item>Knock</item>
             <item>Levitate</item>
             <item>Mirror Image</item>
@@ -614,7 +612,7 @@
             <item>Confusion</item>
             <item>Dimension Door</item>
             <item>Dominate Beast</item>
-            <item>Greater invisibility</item>
+            <item>Greater Invisibility</item>
             <item>Ice Storm</item>
             <item>Polymorph</item>
             <item>Stoneskin</item>
@@ -691,8 +689,7 @@
             <item>Hellish Rebuke</item>
             <item>Hex</item>
             <item>Illusory Script</item>
-            <item>Protection from</item>
-            <item>Evil and Good</item>
+            <item>Protection from Evil and Good</item>
             <item>Unseen Servant</item>
             <item>Witch Bolt</item>
         </level>
@@ -807,14 +804,13 @@
             <item>Longstrider</item>
             <item>Mage Armor</item>
             <item>Magic Missile</item>
-            <item>Protection from</item>
-            <item>Evil and Good</item>
+            <item>Protection from Evil and Good</item>
             <item>Ray of Sickness</item>
             <item>Shield</item>
             <item>Silent Image</item>
             <item>Sleep</item>
-            <item>Tasha’s Hideous Laughter</item>
-            <item>Tenser’s Floating Disk</item>
+            <item>Tasha's Hideous Laughter</item>
+            <item>Tenser's Floating Disk</item>
             <item>Thunderwave</item>
             <item>Unseen Servant</item>
             <item>Witch Bolt</item>
@@ -822,7 +818,7 @@
         <level value="2">
             <item>Alter Self</item>
             <item>Arcane Lock</item>
-            <item>Blindness/Deafness</item>
+            <item>Blindness-Deafness</item>
             <item>Blur</item>
             <item>Cloud of Daggers</item>
             <item>Continual Flame</item>
@@ -830,10 +826,10 @@
             <item>Darkness</item>
             <item>Darkvision</item>
             <item>Detect Thoughts</item>
-            <item>Enlarge/Reduce</item>
+            <item>Enlarge-Reduce</item>
             <item>Flaming Sphere</item>
             <item>Gentle Repose</item>
-            <item>Gust ofWind</item>
+            <item>Gust of Wind</item>
             <item>Hold Person</item>
             <item>Invisibility</item>
             <item>Knock</item>
@@ -867,13 +863,13 @@
             <item>Fireball</item>
             <item>Fly</item>
             <item>Gaseous Form</item>
-            <item>Glyph oFWarding</item>
+            <item>Glyph of Warding</item>
             <item>Haste</item>
             <item>Hypnotic Pattern</item>
             <item>Leomund's Tiny Hut</item>
             <item>Lightning Bolt</item>
             <item>Magic Circle</item>
-            <item>Major image</item>
+            <item>Major Image</item>
             <item>Nondetection</item>
             <item>Phantom Steed</item>
             <item>Protection from Energy</item>
@@ -882,7 +878,7 @@
             <item>Sleet Storm</item>
             <item>Slow</item>
             <item>Stinking Cloud</item>
-            <item>Tbngues</item>
+            <item>Tongues</item>
             <item>Vampiric Touch</item>
             <item>Water Breathing</item>
         </level>
@@ -902,10 +898,8 @@
             <item>Ice Storm</item>
             <item>Leomund's Secret Chest</item>
             <item>Locate Creature</item>
-            <item>Mordenkainen’s</item>
-            <item>Faithful Hound</item>
-            <item>Mordenkainen's</item>
-            <item>Private Sanctum</item>
+            <item>Mordenkainen's Faithful Hound</item>
+            <item>Mordenkainen's Private Sanctum</item>
             <item>Otiluke's Resilient Sphere</item>
             <item>Phantasmal Killer</item>
             <item>Polymorph</item>
@@ -945,8 +939,7 @@
             <item>Contingency</item>
             <item>Create Undead</item>
             <item>Disintegrate</item>
-            <item>Drawmij's Instant</item>
-            <item>Summons</item>
+            <item>Drawmij's Instant Summons</item>
             <item>Eyebite</item>
             <item>Flesh to Stone</item>
             <item>Globe of Invulnerability</item>
@@ -954,7 +947,7 @@
             <item>Magic Jar</item>
             <item>Mass Suggestion</item>
             <item>Move Earth</item>
-            <item>Otiluke’s Freezing Sphere</item>
+            <item>Otiluke's Freezing Sphere</item>
             <item>Otto's Irresistible Dance</item>
             <item>Programmed Illusion</item>
             <item>Sunbeam</item>
@@ -967,7 +960,7 @@
             <item>Finger of Death</item>
             <item>Forcecage</item>
             <item>Mirage Arcane</item>
-            <item>Mordenkainen's Magniﬁcent Mansion</item>
+            <item>Mordenkainen's Magnificent Mansion</item>
             <item>Mordenkainen's Sword</item>
             <item>Plane Shift</item>
             <item>Prismatic Spray</item>
@@ -992,7 +985,6 @@
             <item>Power Word Stun</item>
             <item>Sunburst</item>
             <item>Telepathy</item>
-            <item>Trap the Soul</item>
         </level>
         <level value="9">
             <item>Astral Projection</item>
