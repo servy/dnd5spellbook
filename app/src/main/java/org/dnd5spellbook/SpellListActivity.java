@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -30,16 +31,21 @@ import java.util.logging.Logger;
 public class SpellListActivity extends FragmentActivity {
 
     protected SpellListFragment spellListFragment;
+    private EditText filterText;
+    private CheckBox favOnlyCheckBox;
 
     @Override
     protected void onResume() {
         spellListFragment = (SpellListFragment) getSupportFragmentManager().findFragmentByTag(SpellListFragment.TAG);
+        // TODO: load favorites and state
+        spellListFragment.filter(filterText.getText(), favOnlyCheckBox.isChecked());
         super.onResume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        // TODO: save favorites and state
         spellListFragment = null;
     }
 
@@ -54,9 +60,9 @@ public class SpellListActivity extends FragmentActivity {
                     .add(R.id.container, fragment, SpellListFragment.TAG)
                     .commit();
         }
-        EditText filterText = (EditText) findViewById(R.id.filterText);
+        filterText = (EditText) findViewById(R.id.filterText);
         filterText.addTextChangedListener(new FilterTextWatcher());
-
+        favOnlyCheckBox = (CheckBox) findViewById(R.id.favOnlyCheckBox);
         setTitle("Dnd 5 spell list");
     }
 
@@ -80,6 +86,14 @@ public class SpellListActivity extends FragmentActivity {
     }
 
     /**
+     * Called when "fav only" checkbox state is changed
+     * @param view the checkbox that has been clicked
+     */
+    public void onFavOnlyClicked(View view) {
+        spellListFragment.filter(filterText.getText(), favOnlyCheckBox.isChecked());
+    }
+
+    /**
      * Watches for filter text edit changes and invokes spell list filtering
      */
     protected class FilterTextWatcher implements TextWatcher  {
@@ -95,7 +109,7 @@ public class SpellListActivity extends FragmentActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            spellListFragment.filter(s);
+            spellListFragment.filter(s, favOnlyCheckBox.isChecked());
         }
     }
 
@@ -149,10 +163,13 @@ public class SpellListActivity extends FragmentActivity {
          * Filters the displayed list of spells retaining only those which contain
          * {@code filterString}.
          * @param filterString string constraining the displayed spell list
+         * @param showFavOnly if true, filters out all nonfavorite items
          */
-        public void filter(CharSequence filterString) {
+        public void filter(CharSequence filterString, boolean showFavOnly) {
+            adapter.setShowFavOnly(showFavOnly);
             adapter.getFilter().filter(filterString);
         }
+
 
         /**
          * Reads all spells from assets and returns them. The returned list

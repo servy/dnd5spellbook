@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SpellListActivity"
-    tools:ignore="MergeRootFrame"
-    android:orientation="vertical">
+    tools:ignore="MergeRootFrame">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -12,18 +12,26 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/filterText"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:id="@+id/filterText"
             android:layout_weight="1"
-            android:inputType="text"
-            />
+            android:inputType="text" />
+
+        <CheckBox
+            android:id="@+id/favOnlyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:drawableTop="@android:drawable/btn_star_big_on"
+            android:onClick="onFavOnlyClicked"
+            android:text="only"
+            android:textSize="18sp"/>
 
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-    </FrameLayout>
+        android:layout_height="fill_parent"/>
 </LinearLayout>

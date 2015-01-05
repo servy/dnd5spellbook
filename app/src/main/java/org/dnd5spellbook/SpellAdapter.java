@@ -24,11 +24,29 @@ public class SpellAdapter extends BaseAdapter implements Filterable {
     private List<Spell> originalValues;
     private List<Spell> filteredValues;
     private SpellFilter spellFilter;
+    private boolean showFavOnly;
 
     public SpellAdapter(Activity context, List<Spell> values) {
         this.filteredValues = new ArrayList<>(values);
         this.originalValues = values;
         this.context = context;
+    }
+
+    /**
+     * @return true if list is showing only favorite spells
+     */
+    public boolean isShowFavOnly() {
+        return showFavOnly;
+    }
+
+    /**
+     * Sets whether the list should show only favorite spells. Takes effect only on the next
+     * filtering. You can trigger filtering by calling {@code getFilter().filter()}
+     *
+     * @param showFavOnly whether only favorite spells should be shown
+     */
+    public void setShowFavOnly(boolean showFavOnly) {
+        this.showFavOnly = showFavOnly;
     }
 
     /**
@@ -112,18 +130,26 @@ public class SpellAdapter extends BaseAdapter implements Filterable {
 
     private class SpellFilter extends Filter {
         @Override
-        protected FilterResults performFiltering(final CharSequence constraint) {
+        protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
-            if (constraint == null || constraint.length() <= 0) {
+            if ((constraint == null || constraint.length() <= 0) && (!showFavOnly)) {
                 results.values = originalValues;
                 results.count = originalValues.size();
                 return results;
             }
             List<Spell> newValues = new ArrayList<>();
+            if (constraint == null)
+                constraint = "";
             final String lowerFilterString = constraint.toString().toLowerCase();
             for (Spell spell: originalValues) {
-                if (spell.getName().toLowerCase().contains(lowerFilterString))
-                    newValues.add(spell);
+                if (spell.getName().toLowerCase().contains(lowerFilterString)) {
+                    if (showFavOnly) {
+                        if (spell.isFavorite())
+                            newValues.add(spell);
+                    }
+                    else
+                        newValues.add(spell);
+                }
             }
 
             Collections.sort(newValues, new Comparator<Spell>() {
