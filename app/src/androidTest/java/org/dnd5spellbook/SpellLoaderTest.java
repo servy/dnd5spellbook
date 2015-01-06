@@ -45,6 +45,6 @@ public class SpellLoaderTest extends InstrumentationTestCase {
         for (Spell spell: spells)
             if (spell.getClassLevelConstraints().size() == 0)
                 failures.add(spell.getName());
-        assertTrue("CSpells with no constraints: " + failures.toString(), failures.size() == 0);
+        assertTrue("Spells with no constraints: " + failures.toString(), failures.size() == 0);
     }
 }
