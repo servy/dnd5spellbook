@@ -63,4 +63,13 @@ public class Spell {
     public void setFavorite(boolean favorite) {
         this.favorite = favorite;
     }
+
+    @Override
+    public String toString() {
+        return "Spell{" +
+                "name='" + name + '\'' +
+                ", favorite=" + favorite +
+                ", classLevelConstraints=" + classLevelConstraints +
+                '}';
+    }
 }

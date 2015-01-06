@@ -27,6 +27,8 @@ public class SpellAdapter extends BaseAdapter implements Filterable, Iterable<Sp
     private SpellFilter spellFilter;
     private boolean showFavOnly;
 
+    private static final SpellBackgroundFactory spellBackgroundFactory = new SpellBackgroundFactory();
+
     public SpellAdapter(Activity context, List<Spell> values) {
         this.filteredValues = new ArrayList<>(values);
         this.originalValues = values;
@@ -123,6 +125,13 @@ public class SpellAdapter extends BaseAdapter implements Filterable, Iterable<Sp
             viewHolder.image.setImageResource(android.R.drawable.btn_star_big_on);
         else
             viewHolder.image.setImageResource(android.R.color.transparent);
+
+        try {
+            rowView.setBackground(spellBackgroundFactory.getBackground(context.getApplication(), spell.getClassLevelConstraints()));
+        } catch (Exception e) {
+            throw new RuntimeException("Error with spell " + spell, e);
+        }
+
         return rowView;
     }
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bard">#05ffdd</color>
+    <color name="cleric">#ffffffff</color>
+    <color name="druid">#2dff56</color>
+    <color name="paladin">#feff12</color>
+    <color name="ranger">#51805f</color>
+    <color name="sorcerer">#5156ff</color>
+    <color name="warlock">#a12627</color>
+    <color name="wizard">#ff2d2f</color>
+
+    <color name="level_text">#ff333333</color>
+    <color name="level_square_outline">#ff000000</color>
+
+</resources>

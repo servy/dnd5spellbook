@@ -6,13 +6,13 @@ package org.dnd5spellbook.domain;
  * that class at that level.
  */
 public class ClassLevelConstraint {
-    public String className;
+    public ClassName className;
     public int level;
 
     /**
      * @return name of the casters class that can use the constrained spell
      */
-    public String getClassName() {
+    public ClassName getClassName() {
         return className;
     }
 
@@ -29,7 +29,7 @@ public class ClassLevelConstraint {
      * @param className name of the casters class that can use the constrained spell
      * @param level     level required for a member of a class to cast the constrained spell
      */
-    public ClassLevelConstraint(String className, int level) {
+    public ClassLevelConstraint(ClassName className, int level) {
         this.className = className;
         this.level = level;
     }
@@ -40,5 +40,25 @@ public class ClassLevelConstraint {
                 "className='" + className + '\'' +
                 ", level=" + level +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ClassLevelConstraint that = (ClassLevelConstraint) o;
+
+        if (level != that.level) return false;
+        if (className != that.className) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = className.hashCode();
+        result = 31 * result + level;
+        return result;
     }
 }

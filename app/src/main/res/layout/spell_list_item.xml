@@ -9,15 +9,16 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="4dp"
         android:src="@android:drawable/btn_star_big_on"/>
 
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_height="fill_parent"
         android:text="A spell name"
-        android:textAlignment="center"
-        android:textSize="28sp"/>
+        android:gravity="center_vertical"
+        android:textSize="22sp"
+        />
 
 </LinearLayout>

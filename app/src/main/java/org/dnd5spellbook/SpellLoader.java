@@ -7,6 +7,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import org.dnd5spellbook.domain.ClassLevelConstraint;
+import org.dnd5spellbook.domain.ClassName;
 import org.dnd5spellbook.domain.Spell;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -142,7 +143,7 @@ public class SpellLoader {
      * @throws XmlPullParserException when xml structure parsing error occurs
      */
     private void readAndAppendItems(XmlPullParser parser, Multimap<String, ClassLevelConstraint> result, String className, int level) throws IOException, XmlPullParserException {
-        ClassLevelConstraint constraint = new ClassLevelConstraint(className, level);
+        ClassLevelConstraint constraint = new ClassLevelConstraint(ClassName.fromString(className), level);
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
