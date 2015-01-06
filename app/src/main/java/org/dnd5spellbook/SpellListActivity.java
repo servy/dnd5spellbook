@@ -39,11 +39,13 @@ public class SpellListActivity extends FragmentActivity {
     private static final String FAVORITES = "favorites";
 
     private static final Set<String> DEFAULT_FAVORITES = new HashSet<>();
+    private FilterTextWatcher watcher = new FilterTextWatcher();
 
     @Override
     protected void onResume() {
         spellListFragment = (SpellListFragment) getSupportFragmentManager().findFragmentByTag(SpellListFragment.TAG);
         SharedPreferences pref = getPreferences(Context.MODE_PRIVATE);
+        filterText.addTextChangedListener(watcher);
         filterText.setText(pref.getString(FILTER, ""));
         favOnlyCheckBox.setChecked(pref.getBoolean(SHOW_FAV_ONLY, false));
         spellListFragment.setFavoriteSpellNames(pref.getStringSet(FAVORITES, DEFAULT_FAVORITES));
@@ -60,6 +62,7 @@ public class SpellListActivity extends FragmentActivity {
         editor.putBoolean(SHOW_FAV_ONLY, favOnlyCheckBox.isChecked());
         editor.putStringSet(FAVORITES, spellListFragment.getFavoriteSpellNames());
         editor.apply();
+        filterText.removeTextChangedListener(watcher);
         spellListFragment = null;
     }
 
@@ -75,7 +78,6 @@ public class SpellListActivity extends FragmentActivity {
                     .commit();
         }
         filterText = (EditText) findViewById(R.id.filterText);
-        filterText.addTextChangedListener(new FilterTextWatcher());
         favOnlyCheckBox = (CheckBox) findViewById(R.id.favOnlyCheckBox);
         setTitle("Dnd 5 spell list");
     }
@@ -124,7 +126,8 @@ public class SpellListActivity extends FragmentActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            spellListFragment.filter(s, favOnlyCheckBox.isChecked());
+            if (spellListFragment != null)
+                spellListFragment.filter(s, favOnlyCheckBox.isChecked());
         }
     }
 
