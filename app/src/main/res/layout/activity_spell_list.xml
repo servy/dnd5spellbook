@@ -9,14 +9,25 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@android:color/background_light"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/filterText"
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:inputType="text" />
+
+        <Button
+            android:id="@+id/classFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@android:color/background_light"
+            android:onClick="onClassesFilter"
+            android:text="classes\nfilter"
+            android:textSize="12sp" />
 
         <CheckBox
             android:id="@+id/favOnlyCheckBox"
@@ -26,12 +37,12 @@
             android:drawableTop="@android:drawable/btn_star_big_on"
             android:onClick="onFavOnlyClicked"
             android:text="only"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
+        android:layout_height="fill_parent" />
 </LinearLayout>

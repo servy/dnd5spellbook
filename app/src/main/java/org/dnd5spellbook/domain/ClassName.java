@@ -2,6 +2,11 @@ package org.dnd5spellbook.domain;
 
 import org.dnd5spellbook.R;
 
+import java.util.Collection;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * ClassName have all possible dnd classes
  */
@@ -53,4 +58,32 @@ public enum ClassName {
                 return c;
         throw new IllegalArgumentException("No ClassName enum for " + classUniqueName);
     }
+
+    /**
+     * Converts a set of class name values to a set of strings. Intended for serialization.
+     *
+     * @param classNames collection of class names to be converted to strings
+     * @return set of strings that contain all the class names from classNames
+     */
+    public static Set<String> toStringSet(Collection<ClassName> classNames) {
+        Set<String> result = new HashSet<>();
+        for (ClassName c : classNames)
+            result.add(c.getUniqueName());
+        return result;
+    }
+
+    /**
+     * Converts a collection of class name strings to a set of ClassName. Intended for deserialization.
+     *
+     * @param classNames collection of strings which are class names
+     * @return set of ClassName that contain all ClassName instances with names matching classNames
+     */
+    public static Set<ClassName> fromStringCollection(Collection<String> classNames) {
+        Set<ClassName> result = EnumSet.noneOf(ClassName.class);
+        for (String s : classNames)
+            result.add(fromString(s));
+        return result;
+    }
+
+
 }
