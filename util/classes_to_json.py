@@ -6,17 +6,28 @@ from html.parser import HTMLParser
 
 classes = []
 
+def getSpellsByLevels(spellsByLevels):
+	result = []
+	for i, spells in enumerate(spellsByLevels):
+		result.append(
+		"""{
+				"level": %s,
+				"spells": [%s]
+			}
+		""" % (i, ', '.join(spells))
+		)
+	return result
+
 class Class:
 	def __init__(self, name=None):
 		self.name = name
-		self.spells = []
+		self.spellsByLevels = []
 	def toJson(self):
 		return """ {
 			"name": "%s",
-			"spells": [%s]
+			"spellsByLevels": [%s]
 		}
-		""" % (self.name, ', '.join(self.spells))
-
+		""" % (self.name, ', '.join(getSpellsByLevels(self.spellsByLevels)))
 
 class ClassXMLParser(HTMLParser):
 	def isCastingTime(self, tag):
@@ -37,15 +48,18 @@ class ClassXMLParser(HTMLParser):
 			self.newClass = Class(attrs[0][1])
 		elif tag == 'item':
 			self.state = 'READING_ITEM'
-
+		elif tag == 'level':
+			self.currentSpellLevel = attrs[0][1];
 	def handle_endtag(self, tag):
 		if tag == 'class':
 			self.state = ''
-			self.classes.append(self.newClass)
-			self.items = []			
+			self.classes.append(self.newClass)			
 		elif tag == 'item':
 			self.state = ''
-			self.newClass.spells.append(self.currentItem)
+			self.items.append(self.currentItem)
+		elif tag == 'level':
+			self.newClass.spellsByLevels.append(self.items)
+			self.items = []
 
 	def handle_data(self, data):
 		if self.state == 'READING_ITEM':
@@ -75,4 +89,3 @@ with codecs.open('classes.json', 'w', 'utf8') as f:
 		f.write(dndclass.toJson())
 		delimiter = ', '
 	f.write('\n]')
-
